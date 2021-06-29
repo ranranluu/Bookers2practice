@@ -1,4 +1,4 @@
-<div class="contaner px-5 px-sm-0">
+<div class="container px-5 px-sm-0">
   <div class="row">
     <div class="col-md-3">
       <%= render 'books/error', model: @book %>
@@ -14,13 +14,13 @@
           <th></th>
         </thead>
         <tbody>
-          <% @user.each do |user| %>
+          <% @users.each do |user| %>
           <tr>
-            <td><%= attachment_iamge_tag user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size:"50x50" %></td>
+            <td><%= attachment_image_tag user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size:"50x50" %></td>
             <td><%= user.name %></td>
             <td><%= link_to "Show", "/users/#[user.id}" %></td>
           </tr>
-          <% end %
+          <% end %>
         </tbody>
       </table>
     </div>
