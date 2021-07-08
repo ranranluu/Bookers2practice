@@ -1,0 +1,2 @@
+$("#comment-index").html("<%= j(render partial: "book_comments/comment_index", locals: {book: @book}) %>");
+$(".comments-count").html("コメント数:<%= @book.book_comments.count %>");
